@@ -1,0 +1,223 @@
+/* *{
+    padding: 0;
+    margin: 0;
+} (сбросить все отступы)*/
+body {
+    background-color:#f1f1f1 ;
+    /* размер шрифта */
+font-size: 16px;
+/* жирность шрифта */
+font-weight: normal;
+/* стиль шрифта */
+font-family: 'Roboto', sans-serif;
+/* font: normal 16px 'Roboto, sans-serif'; более короткая запись в определенном порядке */
+}
+/* работа над стилем всех ссылок */
+a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+/* действия с ссылками (подчеркивание в этом случае) */
+a:hover {
+text-decoration: underline;
+}
+/* ссылка после нажатия становится опр. цвета */
+a:active{
+    color:aqua
+}
+/* кнопка преобретает цвет после нажатия */
+a:visited{
+    color: black;
+}
+.avatar {
+    width: 200px;
+    /* скругление. (% или px)*/
+    border-radius: 25px;
+    /* создание эффекта тени */
+    box-shadow: 4px 4px 14px rgba(0,0,0,0)
+}
+/* отсылка к блоку div под названием info1 */
+.info1 p {
+    color: #0b0c0a;
+    /* отступ от краев */
+    margin: 0;
+    font-style:italic;
+    font-weight: bold;
+    /* элементы к тексту (зачеркнутый, перечеркнутый) */
+    text-decoration: none;
+    /* трансформауия текста (заглавные, все маленькие и т.д.) */
+    text-transform:uppercase;
+    /* количество px между буквами */
+    letter-spacing: ;
+    /* пространство между словами в px */
+    word-spacing: ;
+}
+.info1 a{
+    /* подчеркивание текста снизу */
+    border-bottom: 1px solid #000;
+}
+/* Box Model */
+.container {
+    /* задает адаптивность и максимальное занимаемое пространство */
+    max-width: 750px;
+    /* делает сайт посередине */
+    margin: auto;
+}
+/* следующие три тега задает цвет заднего фона */
+.bg-yellow{
+    background:#fff9dc;
+}
+.bg-green{
+    background: #e5ffe7;} 
+    .bg-red{
+        background:#ffb6c1 ;
+    }
+
+.card {
+padding: 15px 20px;
+/* отрыв блоков текста друг от друга */
+margin-bottom: 20px;
+border-radius: 20px;
+}
+.conta{
+    border-radius: 7px;
+}
+/* .pere{
+    padding: 25px;
+} (отступ от левого края) */
+/* задачать цвет отдельным элементам в блоке div */
+.card ul{
+    color: #868686;
+}
+.card a{
+    color: #868686;
+}
+.table{
+    width: 100%;
+    border-radius: 10px;
+}
+.table td{
+    padding-bottom: 10px;
+}
+/* изменение цвета конкретной колонки (для первой и второй колонки) */
+.table td:nth-child(2), .table td:nth-child(3){
+    color: #868686;
+}
+/* .table tr:nth-child(odd){
+    background: grey;
+}  заднйи фон строчек (even/odd для четной/нечетной)*/
+#contacts h3{
+    /* перемещение текста в пространстве */
+text-align: center;
+}
+#contacts h4{
+    text-align: center;
+}
+#cantacts p{
+    text-align: center;
+}
+.form-group label{
+    /* команда для создания блока (текст идет друг под другом) */
+    display: block;
+    /* размер шрифта */
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    /* длина строки */
+    width: 100%;
+    /* корректирует размеры границ (если в процентном соотношении отображадется некорректо) */
+    box-sizing: border-box;
+    /* цвет границ */
+    border-color: rgba(12, 12, 12, 0.445) ;
+    /* задний фон для строк ввода данных */
+    background-color: #fff9dc ;
+    /* подчеркивание */
+    border-bottom: 1px solid #ccc;
+    /* цвет вводимого текста */
+    color: #000;
+    /* отступы от текста внутри строки для ввода */
+    padding: 5px 0 5px;
+    /* цвет для границ (рамок) */
+    outline-color: #131010 ;
+    /* делает шрифт как на всей странице */
+    font-family: inherit;
+}
+.comment input {
+    background-color: #000000;
+    width: 50%;
+    font-family: inherit;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-right: 50px;
+    /* задает тип курсора при наведении */
+    cursor: pointer;
+    /* следующие три свойства задают положение (посередине) */
+    position: relative;
+left: 50%;
+transform: translate(-50%, 0)
+}
+/* задает подсветку при наведении */
+.comment :hover{
+    opacity: 0.8;
+}
+.row{
+    /* делает строки ввода на одной строке (плоскости) */
+    display: flex;
+    /* комнда для отсупа до следущей строки */
+    margin-bottom: 20px;
+}
+/* здесь обращаемся к тегу в теге */
+.row > .form-group{
+    width: 50%;
+    /* отступ справа */
+    margin-right: 20px;
+}
+.info {
+    display: flex;
+}
+/* блок, который добавляет адаптивность (ставить после элемента, с которым рабоаем) */
+@media(max-width:700px){
+.info{
+    /* положение текста */
+    text-align: center;
+    display: block;
+}
+}
+.avatar {
+    width: 30%;
+    margin-right: 20px;
+}
+
+/* следящая кнопка */
+.with{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background: none;
+    width: 50px;
+    height: 50px;
+}
+.ku input{
+    /* position: absolute; */
+    border-radius: 50%;
+    /* border-bottom:  solid none;
+    border-right:  solid none;
+    border-left:  solid none;
+    border-top:  solid none; */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: none;
+}
+.withi{
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    border-radius: 50%;
+    background: none;
+    width: 50px;
+    height: 50px;
